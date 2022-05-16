@@ -1,13 +1,25 @@
 .logo {
     color: $third-color;
     font-family: 'Raleway', sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1.19;
+    line-height: 1.16;
+
+    @media (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 
     &__header {
             color: $second-color;
-            margin-right: 93px;
+
+            @media (min-width: 768px) {
+                    margin-right: 88px;
+                }
+
+            @media (min-width: 1200px) {
+                margin-right: 93px;
+            }
         }
 
     &__footer {

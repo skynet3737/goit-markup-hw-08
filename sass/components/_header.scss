@@ -95,3 +95,33 @@
         fill: currentColor;
     }
 }
+
+.burger-menu {
+    border: none;
+
+    color: $second-color;
+    background-color: transparent;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+
+        fill: currentColor;
+    }
+
+    &__close {
+        display: none;
+    }
+}
+
+.burger-menu.is-open .burger-menu__close {
+    display: block;
+}
+
+.burger-menu.is-open .burger-menu__open {
+    display: none;
+}
