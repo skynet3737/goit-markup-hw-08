@@ -1,0 +1,19 @@
+.logo {
+    color: $third-color;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+
+    &__header {
+            color: $second-color;
+            margin-right: 93px;
+        }
+
+    &__footer {
+        display: inline-block;
+        margin-bottom: 20px;
+        
+        color: $fourth-color;
+    }
+}

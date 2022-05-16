@@ -1,0 +1,130 @@
+.page-footer {
+    padding: 60px 0;
+    background-color: $bg-color;
+}
+
+.footer-block {
+    display: flex;
+    align-items: baseline;
+
+    &__link {
+        display: inline-block;
+        margin-bottom: 9px;
+    }
+
+    &__address {
+        color: $fourth-color;
+        line-height: 1.71;
+        font-style: normal;
+        transition: color 250ms $cubic;
+
+        &:hover, &:focus {
+            color: $third-color;
+        }
+    }
+}
+
+.link {
+    width: 231px;
+    color: $fiveth-color;
+    line-height: 1.71;
+    font-style: normal;
+    transition: color 250ms $cubic;
+
+    &:hover, &:focus {
+        color: $third-color;
+    }
+}
+
+.footer-social {
+    margin-left: 70px;
+
+    &__title {
+        margin-bottom: 20px;
+        color: $fourth-color;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 10px;
+    }
+
+    &__link {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 12px;
+        color: $fourth-color;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: background-color 250ms $cubic;
+
+        &:hover, &:focus {
+            color: $fourth-color;
+            background-color: $third-color;
+        }
+    }
+}
+
+.footer-form {
+    margin-left: 93px;
+
+    &__title {
+        margin-bottom: 20px;
+        color: $fourth-color;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+
+    &__submit {
+        display: flex;
+    }
+
+    &__input {
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 1.25;
+        color: $fourth-color;
+        background-color: $bg-color;
+    }
+
+    &__button {
+        width: 200px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        padding: 10px 62px 10px 29px;
+        border: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.06em;
+        color: $fourth-color;
+        background-color: $third-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &__airplain {
+        position: absolute;
+        right: 28px;
+        width: 24px;
+        height: 24px;
+    }
+}
