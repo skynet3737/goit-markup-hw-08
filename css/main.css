@@ -118,6 +118,7 @@ a {
 }
 
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -232,6 +233,11 @@ a {
 }
 
 .burger-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
   border: none;
   color: #212121;
   background-color: transparent;
@@ -251,6 +257,19 @@ a {
 
 .burger-menu__close {
   display: none;
+}
+
+.burger-menu__box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: red;
+}
+
+.burger-menu__box.is-open {
+  display: block;
 }
 
 .burger-menu.is-open .burger-menu__close {

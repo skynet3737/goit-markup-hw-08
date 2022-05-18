@@ -1,4 +1,5 @@
 .page-header {
+    position: relative;
     border-bottom: 1px solid #ECECEC;
     &--flex {
         display: flex;
@@ -97,6 +98,9 @@
 }
 
 .burger-menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
     border: none;
 
     color: $second-color;
@@ -115,6 +119,19 @@
 
     &__close {
         display: none;
+    }
+
+    &__box {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: red;
+
+        &.is-open {
+            display: block;
+        }
     }
 }
 
