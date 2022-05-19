@@ -1,13 +1,17 @@
 .advantage {
-    display: flex;
+    // display: flex;
 
     &__list {
-        width: 270px;
+        width: 450px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
     }
 
-    &__list:not(:first-child) {
-        margin-left: 30px;
-    }
+    // &__list:not(:first-child) {
+    //     margin-left: 30px;
+    // }
 
     &__icon {
         display: flex;

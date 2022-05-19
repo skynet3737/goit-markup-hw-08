@@ -19,51 +19,72 @@
     <!-- Шапка сайта -->
     <header class="page-header">
       <div class="container page-header--flex">
-        <nav class="nav">
+        <div class="page-header__box">
           <a class="logo" href="./index.html">Web<span class="logo__header">Studio</span></a>
 
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--current" href="./index.html">Студия</a>
+          <button
+            type="button"
+            class="burger-menu"
+            aria-expanded="false"
+            aria-controls="burger-menu__box"
+            data-menu-button
+          >
+            <svg class="burger-menu__icon" aria-label="мобильное меню">
+              <use class="burger-menu__close" href="./images/symbol-defs.svg#icon-menu-close"></use>
+              <use class="burger-menu__open" href="./images/symbol-defs.svg#icon-menu-open"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="burger-menu__box" id="burger-menu__box" data-menu>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+              <li class="nav__item"><a class="nav__link" href="/">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:info@devstudio.com">
+                <svg class="contacts__email">
+                  <use href="./images/symbol-defs.svg#icon-E-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
-            <li class="nav__item"><a class="nav__link" href="/">Контакты</a></li>
+
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--blue" href="tel:+380961111111">
+                <svg class="contacts__smartphone">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
 
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__email">
-                <use href="./images/symbol-defs.svg#icon-E-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__smartphone">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="contacts__social-list">
+            <li class="contacts__social-item">
+              <a class="contacts__social-link" href="#">Instagram</a>
+            </li>
 
-        <button
-          type="button"
-          class="burger-menu"
-          aria-expanded="false"
-          aria-controls="burger-menu__box"
-          data-menu-button
-        >
-          <svg class="burger-menu__icon" aria-label="мобильное меню">
-            <use class="burger-menu__close" href="./images/symbol-defs.svg#icon-menu-close"></use>
-            <use class="burger-menu__open" href="./images/symbol-defs.svg#icon-menu-open"></use>
-          </svg>
-        </button>
+            <li class="contacts__social-item">
+              <a class="contacts__social-link" href="#">Twitter</a>
+            </li>
 
-        <div class="burger-menu__box" id="burger-menu__box" data-menu>fgf</div>
+            <li class="contacts__social-item">
+              <a class="contacts__social-link" href="#">Facebook</a>
+            </li>
+
+            <li class="contacts__social-item">
+              <a class="contacts__social-link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 

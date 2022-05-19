@@ -1,4 +1,8 @@
 .specification {
+    @media (max-width: 767px) {
+        display: none;
+    }
+    
     padding-top: 0;
 
     &__list {
