@@ -5,7 +5,9 @@
     }
 
     &__list {
-        width: 450px;
+        @media (max-width: 767px) {
+            max-width: 450px;
+        }
 
         @media (min-width: 768px) {
             width: 354px;

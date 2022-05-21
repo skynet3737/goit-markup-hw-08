@@ -22,7 +22,6 @@
     transform: translate(-50%, -50%) scale(1);
 
     padding: 40px;
-    width: 450px;
     height: 609px;
 
     background: $fourth-color;
@@ -30,6 +29,11 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @media (max-width: 1199px) {
+        max-width: 450px;
+        width: 100%;
+    }
 
     @media (min-width: 1200px) {
         width: 528px;
