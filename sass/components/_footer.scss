@@ -1,15 +1,47 @@
 .page-footer {
     padding: 60px 0;
     background-color: $bg-color;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .footer-block {
-    display: flex;
-    align-items: baseline;
+    @media (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__info {
+        @media (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            align-items: baseline;
+        }
+
+        @media (min-width: 1200px) {
+            display: contents;
+        }
+    }
 
     &__link {
         display: inline-block;
-        margin-bottom: 9px;
+        margin-bottom: 8px;
+
+        @media (min-width: 1200px) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &__box {
+        @media (max-width: 1199px) {
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            margin-left: 76px;
+            text-align: center;
+        }
     }
 
     &__address {
@@ -37,7 +69,19 @@
 }
 
 .footer-social {
-    margin-left: 70px;
+    @media (min-width: 768px) and (max-width: 1199px) {
+        margin-left: auto;
+        margin-right: 89px;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-left: 70px;
+    }
 
     &__title {
         margin-bottom: 20px;
@@ -50,6 +94,9 @@
 
     &__list {
         display: flex;
+        @media (max-width: 767px) {
+            justify-content: center;
+        }
     }
 
     &__item:not(:first-child) {
@@ -74,7 +121,13 @@
 }
 
 .footer-form {
-    margin-left: 93px;
+    @media (min-width: 768px) and (max-width: 1199px) {
+            text-align: center;
+        }
+
+    @media (min-width: 1200px) {
+        margin-left: 93px;
+    }
 
     &__title {
         margin-bottom: 20px;
@@ -86,11 +139,13 @@
     }
 
     &__submit {
-        display: flex;
+        @media (min-width: 1200px) {
+            display: flex;
+        }
     }
 
     &__input {
-        width: 358px;
+        width: 450px;
         height: 50px;
         padding-left: 16px;
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -99,6 +154,14 @@
         line-height: 1.25;
         color: $fourth-color;
         background-color: $bg-color;
+
+        @media (max-width: 1199px) {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 358px;
+        }
     }
 
     &__button {
@@ -107,7 +170,6 @@
         position: relative;
         display: flex;
         align-items: center;
-        margin-left: 12px;
         padding: 10px 62px 10px 29px;
         border: none;
         font-weight: 700;
@@ -119,6 +181,15 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         cursor: pointer;
+
+        @media (min-width: 1200px) {
+            margin-left: 12px;
+        }
+
+        @media (max-width: 1199px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__airplain {

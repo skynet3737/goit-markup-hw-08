@@ -2,21 +2,51 @@
     background-color: $filter-color;
 
     &__list {
-        display: flex;
+        display: inline-flex;
+        flex-wrap: wrap;
     }
 
     &__item {
-        width: 270px;
+        width: 450px;
         background-color: $fourth-color;
         border-radius: 0 0 4px 4px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
+
+            @media (max-width: 767px) {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            @media (max-width: 1199px) {
+                &:nth-child(-n + 2) {
+                    margin-bottom: 30px;
+                }
+            }
+
+        @media (min-width: 768px) {
+                width: 354px;
+            }
+
+        @media (min-width: 1200px) {
+            width: 270px;
+        }
     }
 
-    &__item:not(:first-child) {
-        margin-left: 30px;
+    @media (min-width: 768px) {
+        &__item:nth-child(even) {
+            margin-left: 30px;
+        }
     }
+
+    @media (min-width: 1200px) {
+        &__item:not(:first-child) {
+                margin-left: 30px;
+            }
+    }
+    
 
     &__img {
         margin-bottom: 30px;
@@ -32,16 +62,25 @@
     }
 
     &__text {
+        margin-bottom: 16px;
         font-size: 16px;
         line-height: 1.18;
         text-align: center;
-        margin-bottom: 16px;
     }
 
     &__socials {
         display: flex;
-        margin-bottom: 30px;
-        margin-left: 32px;
+        margin-bottom: 24px;
+        margin-left: 122px;
+
+        @media (min-width: 768px) {
+                margin-left: 74px;
+            }
+
+        @media (min-width: 1200px) {
+            margin-bottom: 30px;
+            margin-left: 32px;
+        }
     }
 
     &__link {

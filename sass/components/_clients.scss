@@ -1,20 +1,58 @@
 .clients {
     display: flex;
+    flex-wrap: wrap;
 
-    &__item:not(:first-child) {
+    &__item {
         margin-left: 30px;
+        margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+            &:nth-child(odd) {
+                margin-left: 0;
+            }
+
+            &:nth-last-child(-n + 2) {
+                    margin-bottom: 0;
+                }
+        }
+
+        @media (min-width: 768px) {
+            &:nth-child(3n + 1) {
+                margin-left: 0;
+            }
+
+            &:nth-last-child(-n + 3) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            margin-bottom: 0;
+
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
     }
 
     &__link {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 170px;
+        width: 210px;
         height: 92px;
         border: 1px solid $icon-color;
         border-radius: 4px;
         color: $icon-color;
         transition: color 250ms $cubic, border 250ms $cubic;
+
+        @media (min-width: 768px) {
+            width: 226px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 170px;
+        }
 
         &:hover, &:focus {
             color: $third-color;

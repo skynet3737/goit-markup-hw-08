@@ -72,4 +72,10 @@ a {
     line-height: 1.17;
     text-align: center;
     color: $second-color;
+
+    @media (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.16;
+    }
 }

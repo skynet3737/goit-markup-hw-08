@@ -1,17 +1,43 @@
 .advantage {
-    // display: flex;
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__list {
         width: 450px;
 
-        &:not(:last-child) {
-            margin-bottom: 30px;
+        @media (min-width: 768px) {
+            width: 354px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 270px;
+        }
+
+        @media (max-width: 1199px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+
+            &:nth-child(2n) {
+                margin-left: 30px;
+            }
+            
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
         }
     }
 
-    // &__list:not(:first-child) {
-    //     margin-left: 30px;
-    // }
+    @media (min-width: 1200px) {
+        &__list:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
 
     &__icon {
         display: flex;
