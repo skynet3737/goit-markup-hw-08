@@ -40,10 +40,6 @@
 
         @media (max-width: 767px) {
             margin-bottom: 32px;
-
-            &:last-child {
-                margin-bottom: 302px;
-            }
         }
     }
 
@@ -259,7 +255,7 @@
             position: absolute;
             padding: 48px 40px;
 
-            height: 796px;
+            height: 100vh;
             z-index: 10;
 
             top: 0;
@@ -268,7 +264,10 @@
             background-color: $fourth-color;
 
             &.is-open {
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: fixed;
                 }
         }
 
